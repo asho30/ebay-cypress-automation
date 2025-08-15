@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # eBay Search Automation with Cypress
 
 ## Overview
@@ -122,7 +120,3 @@ To record your test execution:
 
 ## Author
 Ahmed Ashour
-=======
-# ebay-cypress-automation
-This project automates the following user flow on eBay using Cypress with the (POM) design pattern
->>>>>>> 0b6c503992145a953fbbf604fbfca819b9c5dcc7
