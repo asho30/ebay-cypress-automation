@@ -8,8 +8,8 @@ module.exports = defineConfig({
     reporterOptions: {
       reportDir: 'cypress/reports',
       overwrite: false,
-      html: true,
-      json: true,
+      html: false, // keep false so we merge first
+      json: true
     },
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
@@ -17,3 +17,8 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
   },
 });
+// Run CMD:
+/*
+npm run test:run
+npm run report:open
+*/

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:run": "npx cypress run",
-    "report:open": "npx mochawesome-merge cypress/reports/*.json | npx mochawesome-report-generator"
+    "report:merge": "npx mochawesome-merge cypress/reports/*.json > report.json",
+    "report:open": "npx mochawesome-report-generator report.json"
   },
   "keywords": [],
   "author": "",

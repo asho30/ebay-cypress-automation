@@ -72,6 +72,13 @@ npx cypress open
 ```
 
 ### Run in Headless Mode with Report:
+By Script:
+```bash
+npm run test:run
+npm run report:merge
+npm run report:open
+```
+By NPX:
 ```bash
 npx cypress run
 ```
@@ -114,9 +121,10 @@ npx mochawesome-report-generator report.json
 To record your test execution:
 - ebay_demo.mp4 in the repo
 - Show:
-  - Running the test.
-  - Cypress browser actions.
+  - Running the test on test runner.
+  - Running the test on Headless Mode with Report.
   - Generated HTML report.
+  - Open HTML report.
 
 ---
 

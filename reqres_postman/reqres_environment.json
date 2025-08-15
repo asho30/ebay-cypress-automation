@@ -1,0 +1,21 @@
+{
+    "id": "reqres-env",
+    "name": "Reqres Environment",
+    "values": [
+        {
+            "key": "baseUrl",
+            "value": "https://reqres.in/api",
+            "enabled": true
+        },
+        {
+            "key": "name",
+            "value": "Ahmed QA",
+            "enabled": true
+        },
+        {
+            "key": "job",
+            "value": "Senior QA Engineer",
+            "enabled": true
+        }
+    ]
+}

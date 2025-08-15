@@ -17,10 +17,7 @@
 import './commands';
 import 'cypress-mochawesome-reporter/register';
 
-cy.on('uncaught:exception', (err, runnable) => {
-  // we expect a 3rd party script to fail on occasion
-  // so we just ignore it and let the test continue
-  // returning false here prevents Cypress from
-  // failing the test
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
   return false;
 });
