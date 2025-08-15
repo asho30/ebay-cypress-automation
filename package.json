@@ -1,0 +1,18 @@
+{
+  "name": "ebay_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:run": "npx cypress run",
+    "report:open": "npx mochawesome-merge cypress/reports/*.json | npx mochawesome-report-generator"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.5.4",
+    "cypress-mochawesome-reporter": "^4.0.0"
+  }
+}
