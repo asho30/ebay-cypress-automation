@@ -9,7 +9,7 @@ module.exports = defineConfig({
       reportDir: "cypress/reports",
       overwrite: false,
       html: true,
-      json: true,   // ✅ needed for merge
+      json: true,
     },
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
