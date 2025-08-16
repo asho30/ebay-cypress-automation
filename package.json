@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:run": "npx cypress run --reporter cypress-mochawesome-reporter",
-    "report:merge": "npx mochawesome-merge \"cypress/reports/**/*.json\" \"mochawesome-report/*.json\" > report.json",
+    "test:run": "npx cypress run",
+    "report:merge": "npx mochawesome-merge \"cypress/reports/**/*.json\" > report.json",
     "report:open": "npx mochawesome-report-generator report.json"
   },
   "keywords": [],
