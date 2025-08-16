@@ -6,13 +6,14 @@ module.exports = defineConfig({
     pageLoadTimeout: 20000,
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
-      reportDir: 'cypress/reports',
+      reportDir: "cypress/reports",
       overwrite: false,
-      html: false, // keep false so we merge first
-      json: true
+      html: true,
+      json: true,   // ✅ needed for merge
     },
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
+      return config;
     },
     chromeWebSecurity: false,
   },
@@ -20,5 +21,6 @@ module.exports = defineConfig({
 // Run CMD:
 /*
 npm run test:run
+npm run report:merge
 npm run report:open
 */
