@@ -25,22 +25,3 @@ jobs:
       - name: Run Cypress tests
         run: npm run test:run
         continue-on-error: true
-
-      - name: Send email with report
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "Cypress Test Report"
-          to: "ahmed.asho@yahoo.com"
-          from: "Cypress Bot <${{ secrets.SMTP_USERNAME }}>"
-          body: "Hello Ahmed, please find the Cypress test report attached."
-          attachments: mochawesome-report/mochawesome.html
-
-      - name: Upload report as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: mochawesome-report
-          path: mochawesome-report/
