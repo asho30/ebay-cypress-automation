@@ -24,21 +24,7 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run test:run
-        continue-on-error: true  
-
-      - name: Debug report output
-        run: |
-          echo "Checking cypress/reports..."
-          ls -R cypress/reports || echo "No cypress/reports folder"
-          echo "Checking mochawesome-report..."
-          ls -R mochawesome-report || echo "No mochawesome-report folder"
-
-
-      - name: Merge mochawesome JSONs
-        run: npm run report:merge
-
-      - name: Generate Mochawesome HTML report
-        run: npm run report:open
+        continue-on-error: true
 
       - name: Send email with report
         uses: dawidd6/action-send-mail@v3
